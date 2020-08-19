@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -9981,16 +9981,17 @@ regulator</text>
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
+<net name="AC+VE" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
 <wire x1="27.08" y1="60" x2="27.08" y2="68" width="0.1524" layer="91"/>
 <wire x1="27.08" y1="68" x2="45" y2="68" width="0.1524" layer="91"/>
 <pinref part="B1" gate="1" pin="AC1"/>
 <wire x1="45" y1="64.08" x2="45" y2="68" width="0.1524" layer="91"/>
+<label x="30" y="68" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="AC-VE" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
 <wire x1="27.08" y1="57.46" x2="27" y2="57.46" width="0.1524" layer="91"/>
@@ -9998,6 +9999,7 @@ regulator</text>
 <wire x1="27" y1="49" x2="45" y2="49" width="0.1524" layer="91"/>
 <pinref part="B1" gate="1" pin="AC2"/>
 <wire x1="45" y1="53.92" x2="45" y2="49" width="0.1524" layer="91"/>
+<label x="27" y="53" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -10024,7 +10026,7 @@ regulator</text>
 <wire x1="64" y1="48.92" x2="64" y2="45" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="DC+VE" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="1"/>
 <wire x1="89.92" y1="59.54" x2="90" y2="59.54" width="0.1524" layer="91"/>
@@ -10044,6 +10046,7 @@ regulator</text>
 <pinref part="C3" gate="G$1" pin="+"/>
 <wire x1="82" y1="56.54" x2="82" y2="59" width="0.1524" layer="91"/>
 <junction x="82" y="59"/>
+<label x="55" y="59" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

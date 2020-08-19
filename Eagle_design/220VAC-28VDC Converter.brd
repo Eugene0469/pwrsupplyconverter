@@ -161,7 +161,7 @@
 <wire x1="85" y1="85" x2="0" y2="85" width="0" layer="20"/>
 <wire x1="0" y1="85" x2="0" y2="0" width="0" layer="20"/>
 <dimension x1="0" y1="0" x2="85" y2="0" x3="42.5" y3="-10" textsize="1.778" layer="20"/>
-<dimension x1="85" y1="0" x2="85" y2="90" x3="97" y3="45" textsize="1.778" layer="20"/>
+<dimension x1="85" y1="0" x2="85" y2="85" x3="98" y3="42.5" textsize="1.778" layer="20"/>
 </plain>
 <libraries>
 <library name="rectifier" urn="urn:adsk.eagle:library:336">
@@ -1512,7 +1512,7 @@ design rules under a new name.</description>
 <element name="J2" library="adafruit" package="1X2-3.5MM" value="1X2-3.5MM" x="63.13" y="3.7" rot="R180"/>
 </elements>
 <signals>
-<signal name="N$1">
+<signal name="AC+VE">
 <contactref element="J1" pad="2"/>
 <contactref element="B1" pad="AC1"/>
 <wire x1="23.46" y1="25.46" x2="13.46" y2="25.46" width="2.54" layer="16"/>
@@ -1524,7 +1524,7 @@ design rules under a new name.</description>
 <wire x1="25.84" y1="3.97" x2="25.84" y2="9.16" width="2.54" layer="16"/>
 <wire x1="25.84" y1="9.16" x2="24" y2="11" width="2.54" layer="16"/>
 </signal>
-<signal name="N$2">
+<signal name="AC-VE">
 <contactref element="J1" pad="1"/>
 <contactref element="B1" pad="AC2"/>
 <wire x1="22.34" y1="3.97" x2="6.03" y2="3.97" width="2.54" layer="16"/>
@@ -1539,12 +1539,22 @@ design rules under a new name.</description>
 <contactref element="C3" pad="-"/>
 <contactref element="C2" pad="-"/>
 <contactref element="C1" pad="-"/>
-<wire x1="19.92" y1="66" x2="62" y2="70.08" width="0" layer="19" extent="1-1"/>
-<wire x1="23.46" y1="35.62" x2="19.92" y2="66" width="0" layer="19" extent="1-1"/>
-<wire x1="68.33" y1="28.05" x2="62" y2="70.08" width="0" layer="19" extent="1-1"/>
-<wire x1="64.83" y1="3.7" x2="68.33" y2="28.05" width="0" layer="19" extent="1-1"/>
+<polygon width="2.54" layer="16" isolate="2.54">
+<vertex x="0" y="0"/>
+<vertex x="85" y="0"/>
+<vertex x="85" y="85"/>
+<vertex x="0" y="85"/>
+</polygon>
+<wire x1="64.83" y1="3.7" x2="69.7" y2="3.7" width="2.54" layer="16"/>
+<wire x1="69.7" y1="3.7" x2="70" y2="4" width="2.54" layer="16"/>
+<polygon width="2.54" layer="1">
+<vertex x="0" y="0"/>
+<vertex x="85" y="0"/>
+<vertex x="85" y="85"/>
+<vertex x="0" y="85"/>
+</polygon>
 </signal>
-<signal name="N$4">
+<signal name="DC+VE">
 <contactref element="J2" pad="1"/>
 <contactref element="B1" pad="+"/>
 <contactref element="C1" pad="+"/>
